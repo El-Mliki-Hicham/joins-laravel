@@ -17,7 +17,7 @@ return new class extends Migration
 
         Schema::create('categories', function (Blueprint $table) {
             $table->increments("id");
-            $table->string('name');
+            $table->string('name_cate');
             $table->timestamps();
         });
         Schema::create('product', function (Blueprint $table) {
@@ -29,7 +29,7 @@ return new class extends Migration
             ->references('id')
             ->on('categories');
         });
-    
+      
         
     }
 

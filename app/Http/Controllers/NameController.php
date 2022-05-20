@@ -11,15 +11,16 @@ class NameController extends Controller
   public function  index(){
 
     $users = DB::table('product')
-    ->join('categories', 'product.id_categores', '=', 'categores.id')
+    ->join('categories', 'product.id_categories', '=', 'categories.id')
     ->select('*')
     ->get()->toArray();  
     
     
 
-    return view('index',compact('users')) ;
+    return view('pages.index',compact('users')) ;
 
  
 
 }
+
 }
